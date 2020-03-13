@@ -1,41 +1,40 @@
 {
-    "name": "KiwiSaverRetirementCalculator",
-    "version": "2.0.0",
-    "license": "MIT",
-    "description": "KiwiSaver Retirement Calculator",
-    "keywords": [
-      "protractor",
-      "cucumber",
-      "typescript",
-      "angular",
-      "angularjs",
-      "testing",
-      "behaviour driven development",
-      "bdd",
-      "selenium",
-      "webdriverJS",
-      "gherkin",
-      "automation testing"
-    ],
-    "scripts": {
-      "example": "protractor tmp/config/config.js",
-      "pretest": "npm run tsc",
-      "test": "npm run example",
-      "tsc": "tsc"
-    },
-    "author": "Geetha Raja",
-    "dependencies": {},
-    "devDependencies": {
-      "@types/cucumber": "0.0.38",
-      "@types/node": "^7.10.9",
-      "@types/selenium-webdriver": "~2.53.39",
-      "chai": "^3.5.0",
-      "chai-as-promised": "^6.0.0",
-      "cucumber": "^2.3.1",
-      "protractor": "^5.4.3",
-      "protractor-cucumber-framework": "^1.0.1",
-      "ts-node": "^2.1.2",
-      "typescript": "^2.3.4"
-    }
+  "name": "KiwiSaverRetirementCalculator",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "KiwiSaver Retirement Calculator",
+  "keywords": [
+    "protractor",
+    "cucumber",
+    "typescript",
+    "angular",
+    "angularjs",
+    "testing",
+    "behaviour driven development",
+    "bdd",
+    "selenium",
+    "webdriverJS",
+    "gherkin",
+    "automation testing"
+  ],
+  "scripts": {
+    "RetirementCalc": "protractor config/config.js",
+    "pretest": "npm run tsc",
+    "test": "npm run RetirementCalc",
+    "tsc": "tsc"
+  },
+  "author": "Geetha Raja",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/cucumber": "0.0.38",
+    "@types/node": "^7.10.9",
+    "@types/selenium-webdriver": "~2.53.39",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "cucumber": "^2.3.1",
+    "protractor": "^5.4.3",
+    "protractor-cucumber-framework": "^1.0.1",
+    "ts-node": "^2.1.2",
+    "typescript": "^2.3.4"
   }
-  
+}

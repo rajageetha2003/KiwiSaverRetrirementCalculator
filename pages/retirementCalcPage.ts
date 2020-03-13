@@ -5,6 +5,8 @@ This file exports CalculatorPageObject class
 **/
 export class RetirementCalculatorPageObject {
   public current_age:ElementFinder;
+  public help_current_age: ElementFinder;
+  public current_age_msg : ElementFinder;
   public employment_status:ElementFinder;
   public annual_income: ElementFinder;
   public selectEmpStatus: any;
@@ -21,6 +23,8 @@ export class RetirementCalculatorPageObject {
 
   constructor() {
     this.current_age = element(by.xpath("//*[@model='ctrl.data.CurrentAge']/*//input"));         
+    this.help_current_age = $('.wpnib-field-current-age button.icon-btn-info');
+    this.current_age_msg = $('.wpnib-field-current-age div.field-message');
     this.employment_status = element(by.model('ctrl.data.EmploymentStatus'));  
     this.selectEmpStatus = function(emp_status:string) {
         this.employment_status.$('.well-value').click();

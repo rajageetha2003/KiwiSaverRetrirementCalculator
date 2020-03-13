@@ -29,13 +29,22 @@ defineSupportCode(({Given, When, Then}) => {
     return calc.go_button.click();
   });
 
+  When(/^I click information icon on Current Age$/, () => {        
+    return calc.help_current_age.click();
+  });
+
   Then(/^Estimated kiwisaver balance should be displayed as "(.*?)"$/, (result: string) => {
     //return expect(calc.result.getText()).to.eventually.equal(result);
     calc.result.getText().then(function(str){
       return expect(str.replace('\n','')).to.eventually.equal(result);
-      
+
     })
     
+  });
+
+  Then(/^Check "(.*?)" is displayed below Current Age field$/, (result: string) => {
+    browser.waitForAngular();    
+     return expect(calc.current_age_msg.getText()).to.eventually.equal(result);      
   });
 })
 
