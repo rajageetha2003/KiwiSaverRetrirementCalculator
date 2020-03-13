@@ -18,7 +18,8 @@ exports.config = {
         '../features/*.feature'
     ],
     // This utility function helps prepare our scripts with required actions like browser maximize
-    onPrepare: () => {
+    onPrepare: async () => {
+        await browser.waitForAngularEnabled(false);
         protractor_1.browser.driver.manage().window().maximize();
     },
     // These are various cucumber compiler options
@@ -27,6 +28,7 @@ exports.config = {
         format: ["pretty"],
         require: ['../stepdefinitions/*.ts', '../support/*.ts'],
         //tags help us execute specific scenarios of feature files
-        tags: '@CalculateRetirementSavings'
+        tags: ['@UserInfo or @CalculateRetirementSavings']
+        //tags: '@CalculateRetirementSavings'
     }
 };
